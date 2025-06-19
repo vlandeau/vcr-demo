@@ -1,0 +1,13 @@
+[project]
+name = "vcr"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.2.1",
+    "langchain>=0.3.25",
+    "langchain-ollama>=0.3.3",
+    "langgraph>=0.4.8",
+    "pytest-recording>=0.13.4",
+]
