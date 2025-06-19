@@ -1,11 +1,11 @@
 interactions:
-  - request:
-      body: '{"model":"gemma3:12b","stream":false,"options":{},"format":{"properties":{"content":{"description":"The
+- request:
+    body: '{"model":"gemma3:12b","stream":false,"options":{},"format":{"properties":{"content":{"description":"The
       content of the generated test file.","example":"def test_example():\n    assert
       True","title":"Content","type":"string"},"test_file_description":{"description":"A
       brief description of the test file.","example":"This test file contains unit
       tests for the example module.","title":"Test File Description","type":"string"}},"required":["content","test_file_description"],"title":"GeneratedTestFileContent","type":"object"},"messages":[{"role":"user","content":"Generate
-      a test file for the following code of the file at /Users/victorlandeau/Programs/voxxed_days/vcr-demo/tests/resources/fibonacci/fibonacci.py:\n```python\n\ndef
+      a test file for the following code of the file at fibonacci.py:\n```python\n\ndef
       fibonacci(n: int) -> int:\n    if n < 0: #xxx\n        raise ValueError(\"Input
       cannot be negative\")\n    elif n == 0:\n        return 0\n    elif n == 1:\n        return
       1\n    else:\n        a, b = 0, 1\n        for _ in range(2, n + 1):\n            a,
@@ -13,53 +13,49 @@ interactions:
       Use pytest as the testing framework.\n2. Use descriptive test names.\n3. Structure
       the tests as follows:\n# Given\nx = 1\ny = 2\n\n# When\nresult = add(x, y)\n\n#
       Then\nassert result == 3\n    "}],"tools":[]}'
-      headers:
-        accept:
-          - application/json
-        accept-encoding:
-          - gzip, deflate, zstd
-        connection:
-          - keep-alive
-        content-length:
-          - '1275'
-        content-type:
-          - application/json
-        host:
-          - 127.0.0.1:11434
-        user-agent:
-          - ollama-python/0.5.1 (arm64 darwin) Python/3.12.10
-      method: POST
-      uri: http://127.0.0.1:11434/api/chat
-    response:
-      body:
-        string: '{"model":"gemma3:12b","created_at":"2025-06-18T15:04:37.729649Z","message":{"role":"assistant","content":"{\n  \"content\":
-        \"# tests/resources/fibonacci/test_fibonacci.py\\nimport pytest\\n\\nfrom
-        resources.fibonacci.fibonacci import fibonacci\\n\\n\\nclass TestFibonacci:\\n    def
-        test_fibonacci_negative_input_raises_value_error(self):\\n        # Given\\n        n
-        = -1\\n\\n        # When \u0026 Then\\n        with pytest.raises(ValueError):\\n            fibonacci(n)\\n\\n    def
-        test_fibonacci_zero_returns_zero(self):\\n        # Given\\n        n = 0\\n\\n        #
-        When\\n        result = fibonacci(n)\\n\\n        # Then\\n        assert
-        result == 0\\n\\n    def test_fibonacci_one_returns_one(self):\\n        #
-        Given\\n        n = 1\\n\\n        # When\\n        result = fibonacci(n)\\n\\n        #
-        Then\\n        assert result == 1\\n\\n    def test_fibonacci_two_returns_one(self):\\n        #
-        Given\\n        n = 2\\n\\n        # When\\n        result = fibonacci(n)\\n\\n        #
-        Then\\n        assert result == 1\\n\\n    def test_fibonacci_five_returns_five(self):\\n        #
-        Given\\n        n = 5\\n\\n        # When\\n        result = fibonacci(n)\\n\\n        #
-        Then\\n        assert result == 5\\n\\n    def test_fibonacci_ten_returns_55(self):\\n        #
-        Given\\n        n = 10\\n\\n        # When\\n        result = fibonacci(n)\\n\\n        #
-        Then\\n        assert result == 55\\n\\n    def test_fibonacci_large_number(self):\\n        #
-        Given\\n        n = 15\\n\\n        # When\\n        result = fibonacci(n)\\n\\n        #
-        Then\\n        assert result == 610\\n\"\n  ,\n  \"test_file_description\":
-        \"Test file for fibonacci.py. Includes tests for negative input, zero input,
-        1, 2, 5, 10, and 15 and uses pytest.\"\n}"},"done_reason":"stop","done":true,"total_duration":20670786042,"load_duration":79303042,"prompt_eval_count":229,"prompt_eval_duration":1512078000,"eval_count":533,"eval_duration":18991619084}'
-      headers:
-        Content-Length:
-          - '1948'
-        Content-Type:
-          - application/json; charset=utf-8
-        Date:
-          - Wed, 18 Jun 2025 15:04:37 GMT
-      status:
-        code: 200
-        message: OK
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, zstd
+      connection:
+      - keep-alive
+      content-length:
+      - '1203'
+      content-type:
+      - application/json
+      host:
+      - 127.0.0.1:11434
+      user-agent:
+      - ollama-python/0.5.1 (arm64 darwin) Python/3.12.10
+    method: POST
+    uri: http://127.0.0.1:11434/api/chat
+  response:
+    body:
+      string: '{"model":"gemma3:12b","created_at":"2025-06-19T12:54:09.047774Z","message":{"role":"assistant","content":"{\n    \"content\":
+        \"# tests/test_fibonacci.py\\nimport pytest\\nfrom fibonacci import fibonacci\\n\\n\\ntest_fibonacci_negative_input
+        = pytest.mark.xfail(reason=\\\"Negative input should raise ValueError\\\")\\n\\n@test_fibonacci_negative_input\\ndef
+        test_fibonacci_negative_input():\\n    # Given\\n    x = -1\\n\\n    # When\\n    with
+        pytest.raises(ValueError):\\n        fibonacci(x)\\n\\ndef test_fibonacci_zero():\\n    #
+        Given\\n    x = 0\\n\\n    # When\\n    result = fibonacci(x)\\n\\n    # Then\\n    assert
+        result == 0\\n\\ndef test_fibonacci_one():\\n    # Given\\n    x = 1\\n\\n    #
+        When\\n    result = fibonacci(x)\\n\\n    # Then\\n    assert result == 1\\n\\ndef
+        test_fibonacci_two():\\n    # Given\\n    x = 2\\n\\n    # When\\n    result
+        = fibonacci(x)\\n\\n    # Then\\n    assert result == 1\\n\\ndef test_fibonacci_three():\\n    #
+        Given\\n    x = 3\\n\\n    # When\\n    result = fibonacci(x)\\n\\n    # Then\\n    assert
+        result == 2\\n\\ndef test_fibonacci_five():\\n    # Given\\n    x = 5\\n\\n    #
+        When\\n    result = fibonacci(x)\\n\\n    # Then\\n    assert result == 5\\n\\ndef
+        test_fibonacci_ten():\\n    # Given\\n    x = 10\\n\\n    # When\\n    result
+        = fibonacci(x)\\n\\n    # Then\\n    assert result == 55\\n\"\n    , \"test_file_description\":
+        \"Test file for fibonacci.py\"\n}\n"},"done_reason":"stop","done":true,"total_duration":18277296292,"load_duration":87481625,"prompt_eval_count":203,"prompt_eval_duration":1373372416,"eval_count":468,"eval_duration":16723592167}'
+    headers:
+      Content-Length:
+      - '1621'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 19 Jun 2025 12:54:09 GMT
+    status:
+      code: 200
+      message: OK
 version: 1

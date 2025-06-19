@@ -15,8 +15,8 @@ class GeneratedTestFileContent(BaseModel):
     )
 
 
-def generate_test_file_content(file_path: str) -> str:
-    file_content = _get_file_content(file_path)
+def generate_test_file_content(project_path: Path, file_path: str) -> str:
+    file_content = _get_file_content(project_path / file_path)
 
     prompt = f"""Generate a test file for the following code of the file at {file_path}:
 ```python
@@ -46,8 +46,8 @@ assert result == 3
     return test_file_content
 
 
-def _get_file_content(file_path: str) -> str:
-    if not Path(file_path).exists():
+def _get_file_content(file_path: Path) -> str:
+    if not file_path.exists():
         raise ValueError(f"File {file_path} does not exist.")
     with open(file_path, "r") as file:
         content = file.read()
