@@ -32,29 +32,28 @@ interactions:
     uri: http://127.0.0.1:11434/api/chat
   response:
     body:
-      string: '{"model":"gemma3:12b","created_at":"2025-06-19T12:54:09.047774Z","message":{"role":"assistant","content":"{\n    \"content\":
-        \"# tests/test_fibonacci.py\\nimport pytest\\nfrom fibonacci import fibonacci\\n\\n\\ntest_fibonacci_negative_input
-        = pytest.mark.xfail(reason=\\\"Negative input should raise ValueError\\\")\\n\\n@test_fibonacci_negative_input\\ndef
+      string: '{"model":"gemma3:12b","created_at":"2025-06-20T11:41:48.926624Z","message":{"role":"assistant","content":"{\n    \"content\":
+        \"# tests/test_fibonacci.py\\nimport pytest\\n\\nfrom fibonacci import fibonacci\\n\\n\\ndef
         test_fibonacci_negative_input():\\n    # Given\\n    x = -1\\n\\n    # When\\n    with
-        pytest.raises(ValueError):\\n        fibonacci(x)\\n\\ndef test_fibonacci_zero():\\n    #
+        pytest.raises(ValueError):\\n        fibonacci(x)\\n\\n\\ndef test_fibonacci_zero():\\n    #
         Given\\n    x = 0\\n\\n    # When\\n    result = fibonacci(x)\\n\\n    # Then\\n    assert
         result == 0\\n\\ndef test_fibonacci_one():\\n    # Given\\n    x = 1\\n\\n    #
         When\\n    result = fibonacci(x)\\n\\n    # Then\\n    assert result == 1\\n\\ndef
         test_fibonacci_two():\\n    # Given\\n    x = 2\\n\\n    # When\\n    result
-        = fibonacci(x)\\n\\n    # Then\\n    assert result == 1\\n\\ndef test_fibonacci_three():\\n    #
-        Given\\n    x = 3\\n\\n    # When\\n    result = fibonacci(x)\\n\\n    # Then\\n    assert
-        result == 2\\n\\ndef test_fibonacci_five():\\n    # Given\\n    x = 5\\n\\n    #
-        When\\n    result = fibonacci(x)\\n\\n    # Then\\n    assert result == 5\\n\\ndef
-        test_fibonacci_ten():\\n    # Given\\n    x = 10\\n\\n    # When\\n    result
-        = fibonacci(x)\\n\\n    # Then\\n    assert result == 55\\n\"\n    , \"test_file_description\":
-        \"Test file for fibonacci.py\"\n}\n"},"done_reason":"stop","done":true,"total_duration":18277296292,"load_duration":87481625,"prompt_eval_count":203,"prompt_eval_duration":1373372416,"eval_count":468,"eval_duration":16723592167}'
+        = fibonacci(x)\\n\\n    # Then\\n    assert result == 1\\n\\ndef test_fibonacci_five():\\n    #
+        Given\\n    x = 5\\n\\n    # When\\n    result = fibonacci(x)\\n\\n    # Then\\n    assert
+        result == 5\\n\\ndef test_fibonacci_ten():\\n    # Given\\n    x = 10\\n\\n    #
+        When\\n    result = fibonacci(x)\\n\\n    # Then\\n    assert result == 55\\n\\ndef
+        test_fibonacci_twenty():\\n    # Given\\n    x = 20\\n\\n    # When\\n    result
+        = fibonacci(x)\\n\\n    # Then\\n    assert result == 6765\"\n  , \"test_file_description\":
+        \"This test file contains pytest tests for the fibonacci.py function.\"\n}"},"done_reason":"stop","done":true,"total_duration":17934110917,"load_duration":78056667,"prompt_eval_count":203,"prompt_eval_duration":1725588500,"eval_count":441,"eval_duration":16033330500}'
     headers:
       Content-Length:
-      - '1621'
+      - '1523'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 19 Jun 2025 12:54:09 GMT
+      - Fri, 20 Jun 2025 11:41:48 GMT
     status:
       code: 200
       message: OK

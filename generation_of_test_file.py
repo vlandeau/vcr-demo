@@ -26,7 +26,6 @@ def generate_test_file_content(project_path: Path, file_path: str) -> str:
 {file_content}
 ```
 
-
 Please adopt the following conventions:
 1. Use pytest as the testing framework.
 2. Use descriptive test names.
