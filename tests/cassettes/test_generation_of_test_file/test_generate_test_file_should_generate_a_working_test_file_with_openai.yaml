@@ -1,0 +1,123 @@
+interactions:
+- request:
+    body: '{"messages":[{"content":"Generate a test file for the following code of
+      the file at fibonacci.py:\n```python\n\ndef fibonacci(n: int) -> int:\n    if
+      n < 0: #xxx\n        raise ValueError(\"Input cannot be negative\")\n    elif
+      n == 0:\n        return 0\n    elif n == 1:\n        return 1\n    else:\n        a,
+      b = 0, 1\n        for _ in range(2, n + 1):\n            a, b = b, a + b\n        return
+      b\n\n```\n\nPlease adopt the following conventions:\n1. Use pytest as the testing
+      framework.\n2. Use descriptive test names.\n3. Structure the tests as follows:\n#
+      Given\nx = 1\ny = 2\n\n# When\nresult = add(x, y)\n\n# Then\nassert result ==
+      3\n    ","role":"user"}],"model":"gpt-3.5-turbo","parallel_tool_calls":false,"stream":false,"tool_choice":{"type":"function","function":{"name":"GeneratedTestFileContent"}},"tools":[{"type":"function","function":{"name":"GeneratedTestFileContent","description":"","parameters":{"properties":{"content":{"description":"The
+      content of the generated test file.","example":"def test_example():\n    assert
+      True","type":"string"},"test_file_description":{"description":"A brief description
+      of the test file.","example":"This test file contains unit tests for the example
+      module.","type":"string"}},"required":["content","test_file_description"],"type":"object"}}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, zstd
+      authorization:
+      - DUMMY
+      connection:
+      - keep-alive
+      content-length:
+      - '1304'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 1.88.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.88.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.10
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAwAAAP//jFTBbtswDL3nKwSdWiAJ4tRBOwM9rFtToNtlQFdgmAtBkWlHqyxpEp0s
+        DfLvg+zEdtt0nQ6GwUe+R1IitwNCqMxoQqhYchSlVaOrx3uYrM3X9epuVpr8+83843Uexxe3N9+u
+        LugwRJjFLxB4iBoLU1oFKI1uYOGAIwTW6Hw2iadxPL2ogdJkoEJYYXF0Np6NsHILM5pE09k+cmmk
+        AE8T8nNACCHb+hty1Bn8oQmZDA+WErznBdCkdSKEOqOChXLvpUeukQ47UBiNoEPaulKqB6Axigmu
+        VCfcnG3vv2sUV4r9vl/YL3Jx/vn6RwFV8TS30Tyfq9ueXkO9sXVCeaVF26Ae3tqTF2KEUM3LOvYG
+        NLjQ0DvwOJcKPu0LGb6M4K6oStAY6qDb9FBxSpOUytIah8RuEDymqc6dKUkuF0ZzISTZw60hTXWa
+        6gxyEvxZa2caCo5yBUxqW+HJaZKmOoivJS737GPHpQd/cs9VBdfOGdd6hdNynYyi00bnuFStwCad
+        hgNfKSSXPYrJ6R7j3oPD1uWSTN6njv5JHb1JHb1PXdQz4BguuX5HZ/amziyI0GFK9xIKWAZeOGnD
+        m6mvNbwJEhCSG0dwCR3x2G4apHc1JHe8hLVxj4TrjLRsK6jLIOHN+XFKd/TZ29oNjv0/9GbIQV55
+        rl4PF9faIA/51tP1sEd27SArU1hnFv5FKM2lln7JHHBfzwf1aGyTVkihFqfVsx1ArTOlRYbmEWq5
+        6Wza8NFuR3VoFB9QNMhVB5x9iIdHCFkGyGW9JdrFJLhYQtaFdguKV5k0PWDQK/t1Ose4m9KlLv6H
+        vgOEAIuQMesgk+J5yZ2bg7DD33Jr21wnTD24lRTAUIILV5FBzivVbCDqNx6hZLnUBTjrZLtiB7vB
+        XwAAAP//AwD2oeByYQYAAA==
+    headers:
+      CF-RAY:
+      - 952b73032f844e73-CDG
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 20 Jun 2025 13:00:29 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=JE.l90w4oct4kK7TP90CslG.xEIkrP6b_CALvOhgeTs-1750424429-1.0.1.1-Nr8HioGcdqsBMz4NnSDpafgvYp9ZAsQztKqNxg4XOAFfKp9j2dpmTnjYie_fssn_w5315zga.uLxF8VMByzsTjmKj6l.1GjAvluEa5nL5Ng;
+        path=/; expires=Fri, 20-Jun-25 13:30:29 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=LKBM8ZqYzUSKs.tjkH1OoiH3p0zbXeHV8N4juiv6SKk-1750424429983-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      access-control-expose-headers:
+      - X-Request-ID
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      openai-organization:
+      - ekinox
+      openai-processing-ms:
+      - '1514'
+      openai-version:
+      - '2020-10-01'
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+      x-envoy-upstream-service-time:
+      - '1517'
+      x-ratelimit-limit-requests:
+      - '10000'
+      x-ratelimit-limit-tokens:
+      - '50000000'
+      x-ratelimit-remaining-requests:
+      - '9999'
+      x-ratelimit-remaining-tokens:
+      - '49999849'
+      x-ratelimit-reset-requests:
+      - 6ms
+      x-ratelimit-reset-tokens:
+      - 0s
+      x-request-id:
+      - req_846877a947e9b6d096bfdb68cc53eece
+    status:
+      code: 200
+      message: OK
+version: 1

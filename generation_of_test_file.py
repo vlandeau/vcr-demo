@@ -1,11 +1,16 @@
+import os
 from pathlib import Path
 
-from langchain_ollama import ChatOllama
+from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
+from dotenv import load_dotenv
+
+from models import Model
+from langchain_ollama import ChatOllama
 
 
-MODEL_NAME = "gemma3:12b"
 
+load_dotenv()
 
 class GeneratedTestFileContent(BaseModel):
     content: str = Field(
@@ -18,7 +23,7 @@ class GeneratedTestFileContent(BaseModel):
     )
 
 
-def generate_test_file_content(project_path: Path, file_path: str) -> str:
+def generate_test_file_content(project_path: Path, file_path: str, model: Model) -> str:
     file_content = _get_file_content(project_path / file_path)
 
     prompt = f"""Generate a test file for the following code of the file at {file_path}:
@@ -41,7 +46,10 @@ result = add(x, y)
 assert result == 3
     """
 
-    model = ChatOllama(model=MODEL_NAME)
+    if model is Model.OLLAMA:
+        model = ChatOllama(model=os.environ.get("OLLAMA_MODEL_NAME"))
+    else:
+        model = ChatOpenAI()
     model_with_structure = model.with_structured_output(GeneratedTestFileContent)
 
     output = model_with_structure.invoke(input=prompt, stream=False)
