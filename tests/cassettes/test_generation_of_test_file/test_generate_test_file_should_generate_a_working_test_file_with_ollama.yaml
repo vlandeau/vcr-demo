@@ -32,33 +32,31 @@ interactions:
     uri: http://127.0.0.1:11434/api/chat
   response:
     body:
-      string: '{"model":"gemma3:12b","created_at":"2025-06-20T13:00:55.629605Z","message":{"role":"assistant","content":"{\n    \"content\":
-        \"# tests/test_fibonacci.py\\nimport pytest\\nfrom fibonacci import fibonacci\\n\\n\\n#
-        Given\\n# When\\n# Then\\ndef test_fibonacci_negative_input():\\n    # Given\\n    x
-        = -1\\n\\n    # When\\n    # Then\\n    with pytest.raises(ValueError):\\n        fibonacci(x)\\n\\ndef
-        test_fibonacci_zero():\\n    # Given\\n    x = 0\\n\\n    # When\\n    result
-        = fibonacci(x)\\n\\n    # Then\\n    assert result == 0\\n\\ndef test_fibonacci_one():\\n    #
-        Given\\n    x = 1\\n\\n    # When\\n    result = fibonacci(x)\\n\\n    # Then\\n    assert
-        result == 1\\n\\ndef test_fibonacci_two():\\n    # Given\\n    x = 2\\n\\n    #
-        When\\n    result = fibonacci(x)\\n\\n    # Then\\n    assert result == 1\\n\\ndef
-        test_fibonacci_three():\\n    # Given\\n    x = 3\\n\\n    # When\\n    result
-        = fibonacci(x)\\n\\n    # Then\\n    assert result == 2\\n\\ndef test_fibonacci_five():\\n    #
-        Given\\n    x = 5\\n\\n    # When\\n    result = fibonacci(x)\\n\\n    # Then\\n    assert
-        result == 5\\n\\ndef test_fibonacci_ten():\\n    # Given\\n    x = 10\\n\\n    #
-        When\\n    result = fibonacci(x)\\n\\n    # Then\\n    assert result == 55\\n\\ndef
-        test_fibonacci_large_input():\\n    # Given\\n    x = 15\\n\\n    # When\\n    result
-        = fibonacci(x)\\n\\n    # Then\\n    assert result == 610\\n\"\n    ,\n    \"test_file_description\":
-        \"This test file contains a comprehensive suite of tests for the fibonacci.py
-        module. It covers various scenarios, including negative inputs, zero, one,
-        small positive integers, and larger positive integers. Descriptive test names
-        and the Given-When-Then structure are used for clarity and maintainability.\"\n}\n"},"done_reason":"stop","done":true,"total_duration":25552960000,"load_duration":3203759625,"prompt_eval_count":203,"prompt_eval_duration":2396496583,"eval_count":557,"eval_duration":19856202208}'
+      string: '{"model":"gemma3:12b","created_at":"2025-06-20T13:26:04.276362Z","message":{"role":"assistant","content":"{\n    \"content\":
+        \"import pytest\\n\\nfrom fibonacci import fibonacci\\n\\n\\nclass TestFibonacci:\\n    def
+        test_fibonacci_negative_input_raises_value_error(self):\\n        # Given\\n        x
+        = -1\\n\\n        # When\\n        with pytest.raises(ValueError):\\n            fibonacci(x)\\n\\n    def
+        test_fibonacci_zero_returns_zero(self):\\n        # Given\\n        x = 0\\n\\n        #
+        When\\n        result = fibonacci(x)\\n\\n        # Then\\n        assert
+        result == 0\\n\\n    def test_fibonacci_one_returns_one(self):\\n        #
+        Given\\n        x = 1\\n\\n        # When\\n        result = fibonacci(x)\\n\\n        #
+        Then\\n        assert result == 1\\n\\n    def test_fibonacci_two_returns_one(self):\\n        #
+        Given\\n        x = 2\\n\\n        # When\\n        result = fibonacci(x)\\n\\n        #
+        Then\\n        assert result == 1\\n\\n    def test_fibonacci_five_returns_five(self):\\n        #
+        Given\\n        x = 5\\n\\n        # When\\n        result = fibonacci(x)\\n\\n        #
+        Then\\n        assert result == 5\\n\\n    def test_fibonacci_ten_returns_55(self):\\n        #
+        Given\\n        x = 10\\n\\n        # When\\n        result = fibonacci(x)\\n\\n        #
+        Then\\n        assert result == 55\\n\\n    def test_fibonacci_large_number_returns_correct_value(self):\\n        #
+        Given\\n        x = 12\\n\\n        # When\\n        result = fibonacci(x)\\n\\n        #
+        Then\\n        assert result == 144\\n\"\n  ,\n  \"test_file_description\":
+        \"Test file for fibonacci.py\"\n}\n"},"done_reason":"stop","done":true,"total_duration":23304147083,"load_duration":3698811208,"prompt_eval_count":203,"prompt_eval_duration":1975857542,"eval_count":488,"eval_duration":17497679625}'
     headers:
       Content-Length:
-      - '1957'
+      - '1811'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Fri, 20 Jun 2025 13:00:55 GMT
+      - Fri, 20 Jun 2025 13:26:04 GMT
     status:
       code: 200
       message: OK

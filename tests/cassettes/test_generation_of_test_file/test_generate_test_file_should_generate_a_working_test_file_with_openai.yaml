@@ -1,7 +1,7 @@
 interactions:
 - request:
     body: '{"messages":[{"content":"Generate a test file for the following code of
-      the file at fibonacci.py:\n```python\n\ndef fibonacci(n: int) -> int:\n    if
+      the file at maths_functions.py:\n```python\n\ndef fibonacci(n: int) -> int:\n    if
       n < 0: #xxx\n        raise ValueError(\"Input cannot be negative\")\n    elif
       n == 0:\n        return 0\n    elif n == 1:\n        return 1\n    else:\n        a,
       b = 0, 1\n        for _ in range(2, n + 1):\n            a, b = b, a + b\n        return
@@ -23,7 +23,7 @@ interactions:
       connection:
       - keep-alive
       content-length:
-      - '1304'
+      - '1310'
       content-type:
       - application/json
       host:
@@ -51,22 +51,23 @@ interactions:
   response:
     body:
       string: !!binary |
-        H4sIAAAAAAAAAwAAAP//jFTBbtswDL3nKwSdWiAJ4tRBOwM9rFtToNtlQFdgmAtBkWlHqyxpEp0s
-        DfLvg+zEdtt0nQ6GwUe+R1IitwNCqMxoQqhYchSlVaOrx3uYrM3X9epuVpr8+83843Uexxe3N9+u
-        LugwRJjFLxB4iBoLU1oFKI1uYOGAIwTW6Hw2iadxPL2ogdJkoEJYYXF0Np6NsHILM5pE09k+cmmk
-        AE8T8nNACCHb+hty1Bn8oQmZDA+WErznBdCkdSKEOqOChXLvpUeukQ47UBiNoEPaulKqB6Axigmu
-        VCfcnG3vv2sUV4r9vl/YL3Jx/vn6RwFV8TS30Tyfq9ueXkO9sXVCeaVF26Ae3tqTF2KEUM3LOvYG
-        NLjQ0DvwOJcKPu0LGb6M4K6oStAY6qDb9FBxSpOUytIah8RuEDymqc6dKUkuF0ZzISTZw60hTXWa
-        6gxyEvxZa2caCo5yBUxqW+HJaZKmOoivJS737GPHpQd/cs9VBdfOGdd6hdNynYyi00bnuFStwCad
-        hgNfKSSXPYrJ6R7j3oPD1uWSTN6njv5JHb1JHb1PXdQz4BguuX5HZ/amziyI0GFK9xIKWAZeOGnD
-        m6mvNbwJEhCSG0dwCR3x2G4apHc1JHe8hLVxj4TrjLRsK6jLIOHN+XFKd/TZ29oNjv0/9GbIQV55
-        rl4PF9faIA/51tP1sEd27SArU1hnFv5FKM2lln7JHHBfzwf1aGyTVkihFqfVsx1ArTOlRYbmEWq5
-        6Wza8NFuR3VoFB9QNMhVB5x9iIdHCFkGyGW9JdrFJLhYQtaFdguKV5k0PWDQK/t1Ose4m9KlLv6H
-        vgOEAIuQMesgk+J5yZ2bg7DD33Jr21wnTD24lRTAUIILV5FBzivVbCDqNx6hZLnUBTjrZLtiB7vB
-        XwAAAP//AwD2oeByYQYAAA==
+        H4sIAAAAAAAAAwAAAP//tFVdT9swFH3vr7jyXoqUVv0gY6vEC2PAtIdpEwM0giLj3CQGx7Zsp1Ah
+        /vvkJE3SUtikaZFaJff4nHvujXP9NAAgPCELICynjhVajI7uL8rHqx/H+ttReDQ/PUv53WW+Ojk+
+        UfvfzkjgGer2Dplbs8ZMFVqg40rWMDNIHXrV6UE42Z+F+wcfK6BQCQpPy7QbzcfhyJXmVo0m01nY
+        MHPFGVqygOsBAMBT9e89ygQfyQImwTpSoLU0Q7JoFwEQo4SPEGott45KR4IOZEo6lN62LIXoAU4p
+        ETMqRJe4vp56912jqBDxhy+zM51mV/cP6dfv/HLy6yebUmFPe/lq6ZWuDKWlZG2DengbX2wlAyCS
+        FhX3FCUa39BztO6EC/zUFBJsM6jJygKl83WQp2hdcUQWEYmi7ueFIOUCIVUGXI6Q8lslKWMc1o6A
+        Syioy228jtixXvVVokhGkeSFVsaBXjm0LopkalSxTYRmUZulpiaYgmfFbTyWmFHHlxhzqUs33FtE
+        kfSlvYNTvkTZPEk4hNG0FqnRy7wFH7jLGztjQ7lFO7ygosTPxijTCvqrTTuUe7XYblOTt3xMXrFh
+        0JbCweGOLPXa824ttRaNaymt6G4707fsTP+HnelbdnKe5Wjipe+xfc1axWHUooVDuO69g+EsgOle
+        0I/MA5htRvYDmG9GwgDCvSZw80rJfm/LAPBRI3OYxE09XPbc9LfDH1r0ok07W7WVzdNJEJGmZwLj
+        BC0zXPvvovou/+FbJM9kYwI8D3bd3/QmncG0tFS8HIFUSuVopexn4E2DPLfjVqhMG3Vrt6gk5ZLb
+        PDZIbTXFiHVK17a8hSo5KTcmNdFGFdrFTt1jlW4Wzms90p0kPfRgjTrlqOiAcPY+2CEYJ+gor2Z5
+        e3wwynJMOmp3jNAy4aoHDHplv7SzS7suncvsb+Q7gDHUfp9ogwlnmyV3ywze1dtp57K2zZVhYtEs
+        OcPYcTT+VSSY0lLU5wSxK+uwiFMuMzTa8PYgHDwPfgMAAP//AwBWlbx+BwgAAA==
     headers:
       CF-RAY:
-      - 952b73032f844e73-CDG
+      - 952b8cadf92eaea3-CDG
       Connection:
       - keep-alive
       Content-Encoding:
@@ -74,14 +75,14 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 20 Jun 2025 13:00:29 GMT
+      - Fri, 20 Jun 2025 13:18:05 GMT
       Server:
       - cloudflare
       Set-Cookie:
-      - __cf_bm=JE.l90w4oct4kK7TP90CslG.xEIkrP6b_CALvOhgeTs-1750424429-1.0.1.1-Nr8HioGcdqsBMz4NnSDpafgvYp9ZAsQztKqNxg4XOAFfKp9j2dpmTnjYie_fssn_w5315zga.uLxF8VMByzsTjmKj6l.1GjAvluEa5nL5Ng;
-        path=/; expires=Fri, 20-Jun-25 13:30:29 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=vHJD2CgbSPlAe9w5an27FMwxnl792kBz_B8DC8oco80-1750425485-1.0.1.1-vz.dT.h8ZhWvy4Aej.o.3EOWqUcAP0h4DXrE1d6LRTbZ3qnfwn.bJWlU1yS58frE.ktoMLf.OMQcM.8o6Oij4aMPb3R8HY1yDCaUeAlxGpw;
+        path=/; expires=Fri, 20-Jun-25 13:48:05 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=LKBM8ZqYzUSKs.tjkH1OoiH3p0zbXeHV8N4juiv6SKk-1750424429983-0.0.1.1-604800000;
+      - _cfuvid=KZq7K6jirbdoNgvK0p1Xh7lORjbcD3bn8uD_YJOYkMA-1750425485569-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Transfer-Encoding:
       - chunked
@@ -96,13 +97,13 @@ interactions:
       openai-organization:
       - ekinox
       openai-processing-ms:
-      - '1514'
+      - '5838'
       openai-version:
       - '2020-10-01'
       strict-transport-security:
       - max-age=31536000; includeSubDomains; preload
       x-envoy-upstream-service-time:
-      - '1517'
+      - '5840'
       x-ratelimit-limit-requests:
       - '10000'
       x-ratelimit-limit-tokens:
@@ -110,13 +111,13 @@ interactions:
       x-ratelimit-remaining-requests:
       - '9999'
       x-ratelimit-remaining-tokens:
-      - '49999849'
+      - '49999848'
       x-ratelimit-reset-requests:
       - 6ms
       x-ratelimit-reset-tokens:
       - 0s
       x-request-id:
-      - req_846877a947e9b6d096bfdb68cc53eece
+      - req_e5e6c95aba0e36a28825b49fa1ad3afb
     status:
       code: 200
       message: OK
