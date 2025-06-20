@@ -4,6 +4,9 @@ from langchain_ollama import ChatOllama
 from pydantic import BaseModel, Field
 
 
+MODEL_NAME = "gemma3:12b"
+
+
 class GeneratedTestFileContent(BaseModel):
     content: str = Field(
         description="The content of the generated test file.",
@@ -23,6 +26,7 @@ def generate_test_file_content(project_path: Path, file_path: str) -> str:
 {file_content}
 ```
 
+
 Please adopt the following conventions:
 1. Use pytest as the testing framework.
 2. Use descriptive test names.
@@ -38,7 +42,7 @@ result = add(x, y)
 assert result == 3
     """
 
-    model = ChatOllama(model="gemma3:12b")
+    model = ChatOllama(model=MODEL_NAME)
     model_with_structure = model.with_structured_output(GeneratedTestFileContent)
 
     output = model_with_structure.invoke(input=prompt, stream=False)
