@@ -8,6 +8,12 @@ resolution-markers = [
     "python_full_version < '3.12.4' and platform_python_implementation == 'PyPy'",
 ]
 
+[manifest]
+members = [
+    "project-to-test",
+    "vcr",
+]
+
 [[package]]
 name = "annotated-types"
 version = "0.7.0"
@@ -525,6 +531,17 @@ sdist = { url = "https://files.pythonhosted.org/packages/f9/e2/3e91f31a7d2b083fe
 wheels = [
     { url = "https://files.pythonhosted.org/packages/54/20/4d324d65cc6d9205fabedc306948156824eb9f0ee1633355a8f7ec5c66bf/pluggy-1.6.0-py3-none-any.whl", hash = "sha256:e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746", size = 20538, upload_time = "2025-05-15T12:30:06.134Z" },
 ]
+
+[[package]]
+name = "project-to-test"
+version = "0.1.0"
+source = { virtual = "resources/project_to_test" }
+dependencies = [
+    { name = "pytest" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "pytest", specifier = ">=8.4.0" }]
 
 [[package]]
 name = "propcache"

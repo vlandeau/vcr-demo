@@ -1,2 +1,4 @@
 .idea/**/*
 .python-version
+.env
+resources/**/test_*

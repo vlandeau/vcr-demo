@@ -11,3 +11,8 @@ dependencies = [
     "langgraph>=0.4.8",
     "pytest-recording>=0.13.4",
 ]
+
+[tool.uv.workspace]
+members = [
+    "resources/project_to_test",
+]
