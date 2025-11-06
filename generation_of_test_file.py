@@ -35,15 +35,21 @@ Please adopt the following conventions:
 1. Use pytest as the testing framework.
 2. Use descriptive test names.
 3. Structure the tests as follows:
-# Given
-x = 1
-y = 2
+```
+import <necessary imports>
 
-# When
-result = add(x, y)
 
-# Then
-assert result == 3
+def test_function_name_should_expected_behavior():
+    # Given
+    x = 1
+    y = 2
+    
+    # When
+    result = add(x, y)
+    
+    # Then
+    assert result == 3
+````
     """
 
     if model is Model.OLLAMA:
