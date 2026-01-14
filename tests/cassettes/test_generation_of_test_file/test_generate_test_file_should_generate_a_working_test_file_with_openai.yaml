@@ -1013,4 +1013,639 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: '{"messages":[{"content":"Generate a test file for the following code of
+      the file at maths_functions.py:\n```python\n\ndef fibonacci(n: int) -> int:\n    if
+      n < 0: #xxx\n        raise ValueError(\"Input cannot be negative\")\n    elif
+      n == 0:\n        return 0\n    elif n == 1:\n        return 1\n    else:\n        a,
+      b = 0, 1\n        for _ in range(2, n + 1):\n            a, b = b, a + b\n        return
+      b\n\n```\n\nPlease adopt the following conventions:\n1. Use pytest as the testing
+      framework.\n2. Use descriptive test names.\n3. Structure the tests as follows:\n```\nimport
+      <necessary imports>\n\n\ndef test_function_name_should_expected_behavior():\n    #
+      Given\n    x = 1\n    y = 2\n    \n    # When\n    result = add(x, y)\n    \n    #
+      Then\n    assert result == 3\n````\n    ","role":"user"}],"model":"gpt-3.5-turbo","parallel_tool_calls":false,"stream":false,"tool_choice":{"type":"function","function":{"name":"GeneratedTestFileContent"}},"tools":[{"type":"function","function":{"name":"GeneratedTestFileContent","description":"","parameters":{"properties":{"content":{"description":"The
+      content of the generated test file.","example":"def test_example():\n    assert
+      True","type":"string"},"test_file_description":{"description":"A brief description
+      of the test file.","example":"This test file contains unit tests for the example
+      module.","type":"string"}},"required":["content","test_file_description"],"type":"object"}}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, zstd
+      authorization:
+      - DUMMY
+      connection:
+      - keep-alive
+      content-length:
+      - '1441'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 1.88.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.88.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.11
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAwAAAP//jFXBcts2EL3rK3bQiz2mNCIl2S5nfHCcpp1cmkzaXsoMBgaXIhwQ4ADL
+        JIpG/94BSZGU7NbVgSLw3u57WGFX+xkAUzlLgclSkKxqPX/YJffvr9c/bt78/vb9n8r+dr/Tb8T6
+        g5Pi3UcWhQj7+ISSjlELaataIylrOlg6FIQha3xzfbtO1svVzy1Q2Rx1CNvWNF8tNnNq3KOdL+Nk
+        00eWVkn0LIW/ZwAA+/YZPJocv7MUltFxp0LvxRZZOpAAmLM67DDhvfIkDLFoBKU1hCbYNo3WE4Cs
+        1VwKrUfh7rOfvI+FElpzSV+2zTe7zj8VD0Rvqyf85D7cNx8nel3qXd0aKhojhwJN8GE/PRMDYEZU
+        beyvaNCFgv6Bnt4pjQ/9QaLzCOG2TYWGwjnYPjueOGNpxlRVW0dQ7wg9ZZkpnK2gElR6fjThoScV
+        6tEaIaXKMpNlJscCQhQf9rkydUNco/ecSmH4D3SW+9I2OudOKI/8q9ANcnTOuovLNMtMcPhNUdlb
+        WLQ0f/FX4P0SaAMrfAapi3l8+YqN5aCM1DjDl6OgQ99ogrtJvuVljwnv0dFAuYPlKzrxmU78nzrx
+        v+rEr+hs2/5xXWXPRaV1DiXxLt3ooM0khUcPd7CfVDJJIY4m61UKyXS9TmE1XW9S2EQAP8HyKo4g
+        7h7JhHCdwm1LiK+SCJKrVQSrq82EcJNCvOrXh/67sA5MBPi9RkmY9/ZBmYnxhSKs/MXJPXihsOZy
+        gj8r7plCxqKM9VXWyHP00qk63Pa2K0JLQUBag1TiqAPHtggmzxplUe8ydmAn/XeYvfT+eTJnHBaN
+        F/r5ABLGWBJt5jCBPvfIYRh22m5rZx/9WSgrlFG+5A6Fb2cI82Trzlaw0Iqz5mROstrZqiZO9gu2
+        csnNbZePjXN8gm6SHiVLQo/AZtXP4tOEPEcSqp2kw/CWQpaYj6HjEBdNruwEmE2O/dzOS7m7oyuz
+        /T/pR0BKrMMlqR3mSp4eeaQ5fOru0ou0ocytYebRfVUSOSl04afIsRCN7qY08ztPWPFCmS262qnh
+        b2h2mP0DAAD//wMAWQTMtIUHAAA=
+    headers:
+      CF-RAY:
+      - 9be006963d9b0403-CDG
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 14 Jan 2026 20:54:01 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=6_wyL4HdjIzwX8Xp.znPIvicihocPjHW9xTkOAuKTVg-1768424041-1.0.1.1-k6Ffvyt6izmugWu14oenralwYQUceXF1Cowo7P6zDnDYkTtTQ619.qt7T1QgNe617ZEmFKop9fy.Fli4sQU8WDehYQ8_CYXIPEqJTlyCOpk;
+        path=/; expires=Wed, 14-Jan-26 21:24:01 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=d51.kFjL6OzxsFS47p1LxFM1oolJ.77eUBmZLXOoaWI-1768424041825-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      access-control-expose-headers:
+      - X-Request-ID
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      openai-organization:
+      - ekinox
+      openai-processing-ms:
+      - '2081'
+      openai-project:
+      - proj_tOYNS3mJehXCgsBlrotsHMQO
+      openai-version:
+      - '2020-10-01'
+      x-envoy-upstream-service-time:
+      - '4328'
+      x-openai-proxy-wasm:
+      - v0.1
+      x-ratelimit-limit-requests:
+      - '10000'
+      x-ratelimit-limit-tokens:
+      - '50000000'
+      x-ratelimit-remaining-requests:
+      - '9999'
+      x-ratelimit-remaining-tokens:
+      - '49999817'
+      x-ratelimit-reset-requests:
+      - 6ms
+      x-ratelimit-reset-tokens:
+      - 0s
+      x-request-id:
+      - req_9247b175927d49ae8a887e93a0caefb0
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"messages":[{"content":"Generate a test file for the following code of
+      the file at maths_functions.py:\n```python\n\ndef fibonacci(n: int) -> int:\n    if
+      n < 0: #xxx\n        raise ValueError(\"Input cannot be negative\")\n    elif
+      n == 0:\n        return 0\n    elif n == 1:\n        return 1\n    else:\n        a,
+      b = 0, 1\n        for _ in range(2, n + 1):\n            a, b = b, a + b\n        return
+      b\n\n```\n\nPlease adopt the following conventions:\n1. Use pytest as the testing
+      framework.\n2. Use descriptive test names.\n3. Structure the tests as follows:\n```\nimport
+      <necessary imports>\n\n\ndef test_function_name_should_expected_behavior():\n    #
+      Given\n    x = 1\n    y = 2\n    \n    # When\n    result = add(x, y)\n    \n    #
+      Then\n    assert result == 3\n````\n    ","role":"user"}],"model":"gpt-3.5-turbo","parallel_tool_calls":false,"stream":false,"tool_choice":{"type":"function","function":{"name":"GeneratedTestFileContent"}},"tools":[{"type":"function","function":{"name":"GeneratedTestFileContent","description":"","parameters":{"properties":{"content":{"description":"The
+      content of the generated test file.","example":"def test_example():\n    assert
+      True","type":"string"},"test_file_description":{"description":"A brief description
+      of the test file.","example":"This test file contains unit tests for the example
+      module.","type":"string"}},"required":["content","test_file_description"],"type":"object"}}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, zstd
+      authorization:
+      - DUMMY
+      connection:
+      - keep-alive
+      content-length:
+      - '1441'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 1.88.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.88.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.11
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAwAAAP//rFVRT9swEH7vr7A8aQKprdpupaUSDxsCXraHSWwgLcgyziVxcWzLvkCj
+        qv99cpImoSDYA3moHH93333n+L5uB4RQGdMVoSLjKHKrRufl7GL5dPr9dLJ5Wp6Xm+QHro1aJw+L
+        bz8ndBgyzP0aBO6zxsLkVgFKo2tYOOAIgXW6OFl+nX2dLU4qIDcxqJCWWhx9Gc9HWLh7M5pMZ/Mm
+        MzNSgKcr8ndACCHb6jdo1DFs6IpMhvudHLznKdBVG0QIdUaFHcq9lx65RjrsQGE0gg6ydaFUD0Bj
+        FBNcqa5w/Wx76+6guFLsEn7ZUl7flJvf5emVSTe3N7cboVyvXk1d2kpQUmjRHlAPb/dXB8UIoZrn
+        Ve4VaHDhQK/B46VUcN40MjzM4C4tctAY+qDbaN9xRFcRlbk1DoktETxGkU6cyUnOMfNsL8KTJiiR
+        90ZzIWQU6SjSMSQkZLF2nz1JzJiGlKN8BCa1LZD5zBQqZo5LDwycM+7oeBVFOkj7RK7kI+jmTZMz
+        Mpq20E0Gmnwm11kbEOgbqeOKzx/94aqAi8DakoanlXSkj99RyyatRMDCaTZ5S9/kmbzmxYEvFJKz
+        w7J1YK8B7j04bONrujfFTQ/ETd8SN/1YcdP3xKXVRDuGGX+pVBjnQCB7DF/oLdXzZg0bCwIhEDSK
+        5x/bz0GB0B0dRrTpTQGLwQsnbbj01XCEySIBIYlx1RlInXZ1yX5CiNSHMzO2ZUR39Nko7gavre96
+        luMgKTxXL72Ia22QV8zBjO4aZNf6njKpdebeH6TSRGrpM+aA+8pOqEdja1lBQlWcFs8sk1pncosM
+        zQNU5WaLZc1HO0vvobNFg6JBrjpgPpkPXyFkMSCXlam2Pi64yCDuUjs/50UsTQ8Y9Np+Kec17rp1
+        qdP/oe8AIcCGu2IdxFI8b7kLc7Cur9SrYe0xV4KpB/coBTCU4MKniCHhhaoNm/rSI+QskToFZ51s
+        /5EGu8E/AAAA//8DAKZV7PWQBwAA
+    headers:
+      CF-RAY:
+      - 9be00c6b3d5f8b21-CDG
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 14 Jan 2026 20:57:58 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=TSNI5oy8oMOIlh7J6QIfu2Di17BTen5ZqOixvuykb2M-1768424278-1.0.1.1-s82XwEAAvLb2ebun17R0NJq7M2Fx.6wBbsFAABC6O378aM0Pwr0km_WSyIxztLAc8UIevXUPIJj6962VOLNpm..fpYs6wWj6Z5zl1uGgOVg;
+        path=/; expires=Wed, 14-Jan-26 21:27:58 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=vopKzfuIlNC1Bt4qsKcD7TRdw5WOMnIunkTz1oxmto4-1768424278639-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      access-control-expose-headers:
+      - X-Request-ID
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      openai-organization:
+      - ekinox
+      openai-processing-ms:
+      - '2238'
+      openai-project:
+      - proj_tOYNS3mJehXCgsBlrotsHMQO
+      openai-version:
+      - '2020-10-01'
+      x-envoy-upstream-service-time:
+      - '2469'
+      x-openai-proxy-wasm:
+      - v0.1
+      x-ratelimit-limit-requests:
+      - '10000'
+      x-ratelimit-limit-tokens:
+      - '50000000'
+      x-ratelimit-remaining-requests:
+      - '9999'
+      x-ratelimit-remaining-tokens:
+      - '49999816'
+      x-ratelimit-reset-requests:
+      - 6ms
+      x-ratelimit-reset-tokens:
+      - 0s
+      x-request-id:
+      - req_b0545e6e08064632bcc092952370332e
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"messages":[{"content":"Generate a test file for the following code of
+      the file at maths_functions.py:\n```python\n\ndef fibonacci(n: int) -> int:\n    if
+      n < 0: #xxx\n        raise ValueError(\"Input cannot be negative\")\n    elif
+      n == 0:\n        return 0\n    elif n == 1:\n        return 1\n    else:\n        a,
+      b = 0, 1\n        for _ in range(2, n + 1):\n            a, b = b, a + b\n        return
+      b\n\n```\n\nPlease adopt the following conventions:\n1. Use pytest as the testing
+      framework.\n2. Use descriptive test names.\n3. Structure the tests as follows:\n```\nimport
+      <necessary imports>\n\n\ndef test_function_name_should_expected_behavior():\n    #
+      Given\n    x = 1\n    y = 2\n    \n    # When\n    result = add(x, y)\n    \n    #
+      Then\n    assert result == 3\n````\n    ","role":"user"}],"model":"gpt-3.5-turbo","parallel_tool_calls":false,"stream":false,"tool_choice":{"type":"function","function":{"name":"GeneratedTestFileContent"}},"tools":[{"type":"function","function":{"name":"GeneratedTestFileContent","description":"","parameters":{"properties":{"content":{"description":"The
+      content of the generated test file.","example":"def test_example():\n    assert
+      True","type":"string"},"test_file_description":{"description":"A brief description
+      of the test file.","example":"This test file contains unit tests for the example
+      module.","type":"string"}},"required":["content","test_file_description"],"type":"object"}}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, zstd
+      authorization:
+      - DUMMY
+      connection:
+      - keep-alive
+      content-length:
+      - '1441'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 1.88.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.88.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.11
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA7RVXU/bMBR976+wzAtILWpLS1klnmB8aNM2aYwNFmS5zk1jcGxj33RUiP8+OUmT
+        UKpuL+ShSnzuveccNz557hBCZUynhIqUo8is6p0sh2ePqb8QNx+4GD18sbfu8y88z5Obs8sz2g0d
+        ZnYPAldd+8JkVgFKo0tYOOAIYepgcng0Go4OjoYFkJkYVGibW+wd7I97mLuZ6fUHw3HVmRopwNMp
+        +d0hhJDn4jdo1DE80Snpd1crGXjP50CndREh1BkVVij3XnrkGmm3AYXRCDrI1rlSLQCNUUxwpRri
+        8npu3TcbxZVi3x85zE5vLsZPt8PJ6HIy+XH66Rt8vW7xlaOXthCU5FrUG9TC6/XpGhkhVPOs6D0H
+        DS5s6BV4PJMKTioj3fUO7uZ5BhqDD/ocrRxHdBpRmVnjkNglgsco0okzGck4pp6tRHhSFSVyZjQX
+        QkaRjiIdQ0JCF6vX2R+JKdMw5ygXwKS2OTKfmlzFzHHpgS24yoGBc8bt7k2jSAeBO+RcLkBXT5oc
+        k964eqgrfqZ1wQ65ah4CY6V+v6Dwu9eB42OgqBnCVavc1XulgS0e+mviAXOnWX+b5v4WyQ58rpAc
+        r4t4Vd9yxb0Hh3VbOXy74sFGxYNtigfvqXjwT8WKuzlsVC2McyCQldO2WljtOjxZEAgxq4WPx+9p
+        b40vot2IViYVsBi8cNKG01OcsnBESUBIYtz68dq3y4i+0Fen9qWz6f6ulU4Oktxz9Ta2uNYGeTE5
+        5NZdhbzUEanM3Doz82utNJFa+pQ54L5IHurR2FJWkFCQ0/xVulLrTGaRoXmAgm44OSrn0Sb9W+jo
+        sELRIFcNMB6OuhsGshiQyyJ/68gXXKQQN61N9PM8lqYFdFq238rZNLu0LvX8f8Y3gBBgw6tgHcRS
+        vLbclDm4L9+YjWX1NheCqQe3kAIYSnDhr4gh4bkqs536pUfIWCL1HJx1sv54dV46fwEAAP//AwAi
+        sODhuwcAAA==
+    headers:
+      CF-RAY:
+      - 9be00f046cd300a2-CDG
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 14 Jan 2026 20:59:45 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=t22tFe6MK2umrXsbDJfi1hGA1qWW9sAZ3Mw4VLE8E6s-1768424385-1.0.1.1-YN_c1HvNgj8t1UbqAzES240ewMSaKgdDoAVrbzx0sNoB8UV4DvazfSo3ejg0IiUYy0g0k0H_U.uHhzgcxLb3BfB_8c39z0MnLctzMA08RT8;
+        path=/; expires=Wed, 14-Jan-26 21:29:45 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=POyCFaGHhPFHTuqeoK.eu6a38FQsrvnbMmvBQxbueOg-1768424385161-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      access-control-expose-headers:
+      - X-Request-ID
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      openai-organization:
+      - ekinox
+      openai-processing-ms:
+      - '2829'
+      openai-project:
+      - proj_tOYNS3mJehXCgsBlrotsHMQO
+      openai-version:
+      - '2020-10-01'
+      x-envoy-upstream-service-time:
+      - '2858'
+      x-openai-proxy-wasm:
+      - v0.1
+      x-ratelimit-limit-requests:
+      - '10000'
+      x-ratelimit-limit-tokens:
+      - '50000000'
+      x-ratelimit-remaining-requests:
+      - '9999'
+      x-ratelimit-remaining-tokens:
+      - '49999816'
+      x-ratelimit-reset-requests:
+      - 6ms
+      x-ratelimit-reset-tokens:
+      - 0s
+      x-request-id:
+      - req_2614e8e593314633814410b4ae396c76
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"messages":[{"content":"Generate a test file for the following code of
+      the file at maths_functions.py:\n```python\n\ndef fibonacci(n: int) -> int:\n    if
+      n < 0: #xxx\n        raise ValueError(\"Input cannot be negative\")\n    elif
+      n == 0:\n        return 0\n    elif n == 1:\n        return 1\n    else:\n        a,
+      b = 0, 1\n        for _ in range(2, n + 1):\n            a, b = b, a + b\n        return
+      b\n\n```\n\nPlease adopt the following conventions:\n1. Use pytest as the testing
+      framework.\n2. Use descriptive test names.\n3. Structure the tests as follows:\n```\nimport
+      <necessary imports>\n\n\ndef test_function_name_should_expected_behavior():\n    #
+      Given\n    x = 1\n    y = 2\n    \n    # When\n    result = add(x, y)\n    \n    #
+      Then\n    assert result == 3\n````\n    ","role":"user"}],"model":"gpt-3.5-turbo","parallel_tool_calls":false,"stream":false,"tool_choice":{"type":"function","function":{"name":"GeneratedTestFileContent"}},"tools":[{"type":"function","function":{"name":"GeneratedTestFileContent","description":"","parameters":{"properties":{"content":{"description":"The
+      content of the generated test file.","example":"def test_example():\n    assert
+      True","type":"string"},"test_file_description":{"description":"A brief description
+      of the test file.","example":"This test file contains unit tests for the example
+      module.","type":"string"}},"required":["content","test_file_description"],"type":"object"}}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, zstd
+      authorization:
+      - DUMMY
+      connection:
+      - keep-alive
+      content-length:
+      - '1441'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 1.88.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.88.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.11
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAwAAAP//rJVdT9swFIbv+yss7waktmtLoV0lLhgCpGmTpgk2aQuyjHOSGBzbs0/K
+        OtT/PjlJk7R8jAtyESV+z3nPY8c+eegRQmVMF4SKjKPIrRqcriYXfnyV3sPs4BzOE/v5093EZ7fz
+        0+TLN9oPGebmFgRusobC5FYBSqMrWTjgCMF1PDuaTyfT6fSoFHITgwppqcXBwfBwgIW7MYPReHJY
+        Z2ZGCvB0QX71CCHkobwHRh3DH7ogo/5mJAfveQp00QQRQp1RYYRy76VHrpH2W1EYjaADti6U6gho
+        jGKCK9UWrq6HznO7UFwpFv+8u/ygv56dZFfJEZ7MPo51/vdLuuzUq6xXtgRKCi2aBerozfhipxgh
+        VPO8zL0ADS4s6CV4PJcKTuuJ9HczuEuLHDSGedCHaDPjiC4iKnNrHBK7QvAYRTpxJic5x8yzDYQn
+        dVAib4zmQsgo0lGkY0hIyGLNONOQcpRLYFLbApnPTKFi5rj0wJZcFcDAOeP29hdRpAPbO3Ihl6Dr
+        N02OyeCwkX5koMl7cpk1AfcSs5p1WLr6ve/B9iy4Nqbhapj29P6zuIlxTDP4XXDl2eglqtEWVP3i
+        wBcKyfFusSqwg829B4dNfGX3CqTxS0jjt0Ua/wcpLU+vY5hx/TLY0duCzQMY7Ue0xlLAYvDCSRs2
+        Z7mJwwkgQSGJcQQzaKuQzS4mUu/u66FdRXRNt47LuvfU83WnLThICs/V437BtTbIS+fQMK5rZd30
+        JmVS68yN30mlidTSZ8wB9+WRpx6NrbACQlmcFlttjVpncosMzR2U5SazeeVH27bbUcd1h6RokKtW
+        mM43aVuGLAbksmx8Ta8VXGQQt6ltz+VFLE1H6HWm/RjnKe9q6lKnr7FvBSHAIsTMOoil2J5yG+Yg
+        /JaeC2uWuQSmHtxSCmAowYVPEUPCC1U1VepXHiFnidQpOOtk89forXv/AAAA//8DAM2qzDQ0BwAA
+    headers:
+      CF-RAY:
+      - 9be010954f969f07-CDG
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 14 Jan 2026 21:00:48 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=dP21MEPEWdNW1nqoAcA4c0PlRmW1KbTbpyFDKjZfgDM-1768424448-1.0.1.1-ngEkQ1GTR.m3QQL0Hs_UxKyVMuiJx.547RmJ3Nr5joYCrqpDTgMlTwsrhB3v0Z6oyhdy20ywfwEdHzuXNxIou7Wdy9noCjX0pi7uaSen1JY;
+        path=/; expires=Wed, 14-Jan-26 21:30:48 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=K1y23hNRrhnQTjgiXRmRGi9678HDuCJFBLdIoLdgcfM-1768424448587-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      access-control-expose-headers:
+      - X-Request-ID
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      openai-organization:
+      - ekinox
+      openai-processing-ms:
+      - '1570'
+      openai-project:
+      - proj_tOYNS3mJehXCgsBlrotsHMQO
+      openai-version:
+      - '2020-10-01'
+      x-envoy-upstream-service-time:
+      - '1799'
+      x-openai-proxy-wasm:
+      - v0.1
+      x-ratelimit-limit-requests:
+      - '10000'
+      x-ratelimit-limit-tokens:
+      - '50000000'
+      x-ratelimit-remaining-requests:
+      - '9999'
+      x-ratelimit-remaining-tokens:
+      - '49999817'
+      x-ratelimit-reset-requests:
+      - 6ms
+      x-ratelimit-reset-tokens:
+      - 0s
+      x-request-id:
+      - req_510580113cfd4baab2e3336178760c5a
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"messages":[{"content":"Generate a test file for the following code of
+      the file at maths_functions.py:\n```python\n\ndef fibonacci(n: int) -> int:\n    if
+      n < 0: #xxx\n        raise ValueError(\"Input cannot be negative\")\n    elif
+      n == 0:\n        return 0\n    elif n == 1:\n        return 1\n    else:\n        a,
+      b = 0, 1\n        for _ in range(2, n + 1):\n            a, b = b, a + b\n        return
+      b\n\n```\n\nPlease adopt the following conventions:\n1. Use pytest as the testing
+      framework.\n2. Use descriptive test names.\n3. Structure the tests as follows:\n```\nimport
+      <necessary imports>\n\n\ndef test_function_name_should_expected_behavior():\n    #
+      Given\n    x = 1\n    y = 2\n    \n    # When\n    result = add(x, y)\n    \n    #
+      Then\n    assert result == 3\n````\n    ","role":"user"}],"model":"gpt-3.5-turbo","parallel_tool_calls":false,"stream":false,"tool_choice":{"type":"function","function":{"name":"GeneratedTestFileContent"}},"tools":[{"type":"function","function":{"name":"GeneratedTestFileContent","description":"","parameters":{"properties":{"content":{"description":"The
+      content of the generated test file.","example":"def test_example():\n    assert
+      True","type":"string"},"test_file_description":{"description":"A brief description
+      of the test file.","example":"This test file contains unit tests for the example
+      module.","type":"string"}},"required":["content","test_file_description"],"type":"object"}}}]}'
+    headers:
+      accept:
+      - application/json
+      accept-encoding:
+      - gzip, deflate, zstd
+      authorization:
+      - DUMMY
+      connection:
+      - keep-alive
+      content-length:
+      - '1441'
+      content-type:
+      - application/json
+      host:
+      - api.openai.com
+      user-agent:
+      - OpenAI/Python 1.88.0
+      x-stainless-arch:
+      - arm64
+      x-stainless-async:
+      - 'false'
+      x-stainless-lang:
+      - python
+      x-stainless-os:
+      - MacOS
+      x-stainless-package-version:
+      - 1.88.0
+      x-stainless-retry-count:
+      - '0'
+      x-stainless-runtime:
+      - CPython
+      x-stainless-runtime-version:
+      - 3.12.11
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAwAAAP//tJVdT9swFIbv+yss7waktmsLLawSN+N7F2hoaExakGWck8bUsY190rVD
+        /PfJSZqEUjFuyEWV+D0fz3HjN08dQqiM6ZRQkXIUmVW949Xo8kqefr/4we2JWMVfH+bzxdnFLS6u
+        L85pN2SY+wcQuM7qC5NZBSiNLmXhgCOEqsODyeH+aH+896UQMhODCmkzi729/riHubs3vcFwNK4y
+        UyMFeDolvzuEEPJU/AZGHcOSTsmgu17JwHs+AzqtgwihzqiwQrn30iPXSLuNKIxG0AFb50q1BDRG
+        McGVahqX11PrvtkorhT7xbPJ1eP1YJkPV99O5h7PB+pyfvu31a8svbIFUJJrUW9QS6/XpxvNCKGa
+        Z0XuOWhwYUNvwOOZVHBcDdLdzOBulmegMcxBn6L1xBGdRlRm1jgkdoXgMYp04kxGMo6pZ2sIT6qg
+        RN4bzYWQUaSjSMeQkJDF6nX2R2LKNMw4ygUwqW2OzKcmVzFzXHpgsBRgQ9Gd3WkU6YD3iZzLBejq
+        SZMj0htXD3XEbQr6801aR4U+FXO/KOx3fnKVw6lzxtWVw1Wz7ejdEvstcgaPOVeeDWpqwNxpNngL
+        d7CNtnpw4HOF5GiT40V8azDuPTis08ri74QebkAP34IefiT08B3Qs8INHMOU/wd1Ut3D0oJACPNV
+        fIcfOcRGuzAP7Ua0mkYBi8ELJ4u3uThK4RySoJDEuKYtWZ8jIvXmyerbVUSf6YsD+9zZdn/XMiYH
+        Se65eu1YXGuDvKgcLOuuUp5rd1RmZp259xupNJFa+pQ54L4wHerR2BIrIBTNaf7CWKl1JrPI0Myh
+        aDc6OCzr0cb4W+r+WkWDXDXCeDTpbinIYkAuC+ut3V5wkULcpDauz/NYmpbQaY39Gmdb7XJ0qWfv
+        Kd8IItgZxMw6iKV4OXIT5uChfJW2htXbXABTD24hBTCU4MJfEUPCc1XaOvUrj5CxROoZOOtk/d3q
+        PHf+AQAA//8DAH6GZhu2BwAA
+    headers:
+      CF-RAY:
+      - 9be012d88a8d2a4f-CDG
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 14 Jan 2026 21:02:21 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=Z3s.VLk639rIMmqGjp2PK0UHw_OAwkazuaYuwG60X98-1768424541-1.0.1.1-UjnPYX.YsXUyGfSwi3gWDQ_P5wcXy4Ro7BgRSIxhPVAVacyJHvR5h_gIg0Ais5Qex7riVgogHaiHkXsmhUg0d0DyqOXvQROR1pmLT.gIA.E;
+        path=/; expires=Wed, 14-Jan-26 21:32:21 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=iWesgrsFbhmZ3f2CToGTxcnmaFEZ6yJDmBj6le8GEUQ-1768424541406-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      access-control-expose-headers:
+      - X-Request-ID
+      alt-svc:
+      - h3=":443"; ma=86400
+      cf-cache-status:
+      - DYNAMIC
+      openai-organization:
+      - ekinox
+      openai-processing-ms:
+      - '2275'
+      openai-project:
+      - proj_tOYNS3mJehXCgsBlrotsHMQO
+      openai-version:
+      - '2020-10-01'
+      x-envoy-upstream-service-time:
+      - '2303'
+      x-openai-proxy-wasm:
+      - v0.1
+      x-ratelimit-limit-requests:
+      - '10000'
+      x-ratelimit-limit-tokens:
+      - '50000000'
+      x-ratelimit-remaining-requests:
+      - '9999'
+      x-ratelimit-remaining-tokens:
+      - '49999816'
+      x-ratelimit-reset-requests:
+      - 6ms
+      x-ratelimit-reset-tokens:
+      - 0s
+      x-request-id:
+      - req_04efeb49197a42458abcfbcb2e9c09ec
+    status:
+      code: 200
+      message: OK
 version: 1
