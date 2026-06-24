@@ -14,7 +14,7 @@ def test_generate_test_file_should_generate_a_working_test_file_with_openai():
     file_path = "maths_functions.py"
     file_content = """
 def fibonacci(n: int) -> int:
-    if n < 0: #xxx
+    if n < 0:
         raise ValueError("Input cannot be negative")
     elif n == 0:
         return 0
